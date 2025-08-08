@@ -18,6 +18,8 @@ SITE_PASSWORD='admin'
 SITE_EMAIL='greendaycu20@gmail.com'
 SITE_URL="${splitted_path[${last_index}]}.test"
 DB_USER=root
+THEME_ARRAY=("astra")
+PLUGIN_ARRAY=("woocommerce")
 
 #download wordpress core files inside the current folder.
 wp core download
@@ -30,3 +32,13 @@ wp db create
 
 #install wordpress
 wp core install --url="${SITE_URL}" --title="${SITE_TITLE}" --admin_user="${SITE_USERNAME}" --admin_password="${SITE_PASSWORD}" --admin_email="${SITE_EMAIL}"
+
+#download and activate woocommerce 
+for plugin in "${PLUGIN_ARRAY[@]}"; do
+   wp plugin install ${plugin} --activate
+done
+
+#download and acivate new theme (astra)
+for theme in "${THEME_ARRAY[@]}"; do
+   wp theme install ${theme} --activate
+done
