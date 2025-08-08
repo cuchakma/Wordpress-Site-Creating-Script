@@ -1,6 +1,7 @@
 🚀 Instantly Set Up a WordPress Site with a Script
 
 🛠️ Usage Instructions:
+
 1.Create a new folder for your site
 
 2. Place the script inside that folder
