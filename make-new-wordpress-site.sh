@@ -12,7 +12,7 @@ last_index=$(( ${#splitted_path[@]} - 1 ))
 #use these constants.
 DB_NAME=${splitted_path[${last_index}]}
 SITE_NAME=${splitted_path[${last_index}]}
-SITE_TITLE="${splitted_path[${last_index}]}-TITLE"
+SITE_TITLE="${splitted_path[${last_index}]}"
 SITE_USERNAME='root'
 SITE_PASSWORD='admin'
 SITE_EMAIL='greendaycu20@gmail.com'
